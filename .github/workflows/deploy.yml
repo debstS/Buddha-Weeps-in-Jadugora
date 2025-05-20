@@ -1,12 +1,12 @@
 name: Deploy React Application
-permissions:
-  contents: write
-
 uses: JamesIves/github-pages-deploy-action@v4
 with:
   branch: gh-pages        # The branch the build output should be pushed to
   folder: build           # The folder that contains the build output
   token: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  contents: write
 
 on:
   push:
